@@ -33,84 +33,87 @@ body {
 }
 
 .container .container-right {
-    padding: 30px 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  padding: 30px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container .container-right .product-type {
-    color: hsl(228, 12%, 48%);
-    letter-spacing: 5px;
-    font: 500 12px "Montserrat", sans-serif;
-}
-
-
-.left-side .perfume-name {
-  color: hsl(212, 21%, 14%);
-  text-transform: capitalize;
-  font: 700 30px/1 "Fraunces", serif;
-}
-
-.left-side .description .perfume-description {
   color: hsl(228, 12%, 48%);
-  font: 500 14px/1.6 "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font: 500 12px "Montserrat", sans-serif;
 }
 
-.container .left-side .price {
+.container-right .product-name {
+  color: hsl(212, 21%, 14%);
+  font: 700 30px/1 "Fraunces", serif;
+  text-transform: capitalize;
+}
+
+.container-right .product-description .description {
+  font: 500 14px/1.6 "Montserrat", sans-serif;
+  color: hsl(228, 8%, 52%);
+}
+
+.container .container-right .product-price {
   display: flex;
   align-items: center;
 }
 
-.left-side .price .sold-price {
-    margin-right: 15px;
-    color: hsl(158, 36%, 37%);
+.container-right .product-price .discound-price {
+  margin-right: 15px;
   font: 700 35px "Fraunces", serif;
+  color: hsl(158, 36%, 36%);
 }
 
-.left-side .price .actual-price { 
-    color: hsl(228, 12%, 48%);
-    text-decoration: line-through;
-    font: 500 14px "Montserrat", sans-serif;
+.container-right .product-price .actual-price {
+  font: 500 14px "Montserrat", sans-serif;
+  color: hsl(228, 8%, 52%);
+  text-decoration: line-through;
+  margin-bottom: 8px;
 }
 
-.container .left-side .buy-it button {
+.container .container-right .btn button {
   width: 100%;
   border: none;
   outline: none;
   padding: 13px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: all .3s ease;
-  color: hsl(0, 0%, 100%);
   background: hsl(158, 36%, 37%);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
 }
 
-.left-side .buy-it button:active {
-    background: hsl(212, 21%, 14%);
+.container-right .btn i {
+    padding-right: 4px;
+}
+
+.container-right .btn button:active {
+    background: hsl(192, 22%, 22%);
 }
 
 @media (max-width: 375px) {
-  .container  { 
+  .container {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100vh;
   }
-  .container .left-side .title {
+  .container .container-right .product-type {
     font-size: 16px;
   }
-  .container .left-side {
+  .container .container-right {
     height: 100%;
   }
-  .container .right-side .image img {
+  .container .container-left .product-image img {
     height: 200px;
     background-size: cover;
     object-fit: cover;
   }
 }
-
-
 
 .attribution {
   font-size: 11px;
